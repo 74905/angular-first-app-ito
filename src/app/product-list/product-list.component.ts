@@ -10,22 +10,6 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
-  students = [
-    {
-      name: "太郎",
-      gender: "男",
-      age: 40
-    },
-      {
-      name: "次郎",
-      gender: "男",
-      age: 40
-    }, 
-      {
-      name: "三郎",
-      gender: "男",
-      age: 40
-    } ];
 
   share() {
     window.alert('The product has been shared!');

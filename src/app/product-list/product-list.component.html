@@ -1,5 +1,18 @@
-<div *ngFor="let student of students">
-  <h2>{{ student }}</h2>
+<h2>商品一覧</h2>
+
+
+<div *ngFor="let student of products">
+  <h3>
+  <a [title]="student.name + '詳細はこちら'">{{ student.name }}</a>
+  </h3>
+
+  <p>{{ student.price }}円</p>
+  
+  <p *ngIf="student.description">
+    詳細:{{ student.description }}
+  </p>
+  
+  <button (click)=" share()">share</button>
 </div>
 
 
