@@ -15,6 +15,10 @@ export class ProductListComponent {
     window.alert('The product has been shared!');
   }
    notify(){
+    this.showAlertWindow();
+  }
+
+  showAlertWindow(){
     window.alert('お知らせを受け取る');
   }
 }

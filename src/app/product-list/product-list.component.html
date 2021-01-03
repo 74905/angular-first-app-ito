@@ -1,19 +1,22 @@
 <h2>商品一覧</h2>
 
 
-<div *ngFor="let student of products">
-  <h3>
-  <a [title]="student.name + '詳細はこちら'">{{ student.name }}</a>
-  </h3>
+<div *ngFor="let student of products; let productId = index">
+	<h3>
+		<a [title]="student.name + '詳細はこちら'" [routerLink]="['/products',productId]">
+			{{ student.name }}
+			{{ productId }}
+		</a>
+	</h3>
 
-  <p>{{ student.price }}円</p>
-  
-  <p *ngIf="student.description">
-    詳細:{{ student.description }}
-  </p>
-  
-  <button (click)=" share()">シェア</button>
-  <app-product-alert [name]="student.name" (onNotify)="notify()"></app-product-alert>
+	<p>{{ student.price }}円</p>
+
+	<p *ngIf="student.description">
+		詳細:{{ student.description }}
+	</p>
+
+	<button (click)=" share()">シェア</button>
+	<app-product-alert [name]="student" (onNotify)="notify()"></app-product-alert>
 </div>
 
 
