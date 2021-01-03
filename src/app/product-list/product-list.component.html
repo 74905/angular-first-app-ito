@@ -12,7 +12,8 @@
     詳細:{{ student.description }}
   </p>
   
-  <button (click)=" share()">share</button>
+  <button (click)=" share()">シェア</button>
+  <app-product-alert [name]="student.name" (onNotify)="notify()"></app-product-alert>
 </div>
 
 
